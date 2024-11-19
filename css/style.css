@@ -60,6 +60,12 @@ nav ul li a:hover {
 }
 
 /* Page Heading */
+footer {
+  margin-bottom: 20px;
+  font-size: 14px;
+  color: #777;
+}
+
 h2 {
   color: #333;
   margin-bottom: 15px;
