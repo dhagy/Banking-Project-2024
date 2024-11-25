@@ -23,6 +23,90 @@ body::before {
   z-index: -1;
 }
 
+/* Login Page Specific Styles */
+body#login-page {
+  color: white; /* Change default text color to white */
+}
+
+body#login-page h2,
+body#login-page label {
+  color: white; /* Ensure headings and labels are white */
+}
+
+body#login-page input {
+  background-color: rgba(255, 255, 255, 0.2); /* Slight transparency for input background */
+  color: white; /* Input text color */
+}
+
+body#login-page input::placeholder {
+  color: rgba(255, 255, 255, 0.7); /* Placeholder text color */
+}
+
+body#login-page button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+body#login-page button:hover {
+  background-color: #45a049;
+}
+
+/* Style for Input Fields on Login Page */
+body#login-page input[type="text"],
+body#login-page input[type="password"] {
+  width: 100%; /* Full width of the container */
+  max-width: 400px; /* Limit the maximum width */
+  padding: 15px; /* Increase padding for a better feel */
+  margin: 10px 0; /* Space between fields */
+  border: 1px solid rgba(255, 255, 255, 0.5); /* Light border */
+  border-radius: 8px; /* Rounded corners for a modern look */
+  font-size: 16px; /* Comfortable text size */
+  background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
+  color: white; /* Text color */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth focus effect */
+}
+
+body#login-page input[type="text"]::placeholder,
+body#login-page input[type="password"]::placeholder {
+  color: rgba(255, 255, 255, 0.7); /* Placeholder text color */
+}
+
+body#login-page input[type="text"]:focus,
+body#login-page input[type="password"]:focus {
+  border-color: #4CAF50; /* Highlight border on focus */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Enhanced shadow on focus */
+  outline: none; /* Remove default focus outline */
+}
+
+#login-container form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#login-container h2 {
+  text-align: center;
+  margin: 0 auto 20px;
+  font-size: 24px;
+  color: white;
+}
+
+#login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 0 auto;
+}
+
 /* Navbar Styling with Transparency */
 nav {
   position: fixed;
@@ -170,4 +254,68 @@ button:hover {
   h2 {
     font-size: 20px;
   }
+}
+
+/* Customer Support Page Styling */
+#customer-support-container {
+  background-color: rgba(255, 255, 255, 0.9); /* Matches other page containers */
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 600px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+#customer-support-container h2 {
+  color: #333; /* Professional heading color */
+  margin-bottom: 15px;
+}
+
+#customer-support-container p {
+  color: #555; /* Description text color */
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+#support-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#support-form label {
+  font-weight: bold;
+  color: #333;
+  text-align: left;
+}
+
+#support-form input,
+#support-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent background */
+  color: #333;
+}
+
+#support-form textarea {
+  resize: vertical; /* Allow vertical resizing only */
+}
+
+#support-form button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#support-form button:hover {
+  background-color: #45a049;
 }
