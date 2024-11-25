@@ -1,23 +1,36 @@
-/* General Body Styling */
+/* General Body Styling with Background Image */
 body {
   font-family: Arial, sans-serif;
-  background-color: #f0f2f5;
+  background-image: url('../img/wwang_040522_102.jpg'); 
+  background-size: cover; /* Make the image cover the entire page */
+  background-position: center; /* Center the image */
+  background-attachment: fixed; /* Keep the image fixed while scrolling */
+  background-repeat: no-repeat; /* Prevent the image from repeating */
   margin: 0;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  min-height: 100vh;
-  padding-top: 70px; /* Space for the navbar */
+  padding: 0;
+  color: black; /* Updated text color for contrast */
+  padding-top: 60px; /* Add padding to ensure content is below the navbar */
 }
 
-/* Navbar Styling */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* Semi-transparent overlay for better text visibility */
+  z-index: -1;
+}
+
+/* Navbar Styling with Transparency */
 nav {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: #4CAF50;
+  background-color: rgba(76, 175, 80, 0.8); /* Semi-transparent green */
   padding: 10px 0;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
   z-index: 1000;
 }
 
@@ -50,24 +63,25 @@ nav ul li a:hover {
 
 /* Main Content Container */
 #dashboard-container, #balance-container, #transfer-container, #deposit-container {
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.9); /* Slight transparency */
   border-radius: 8px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   padding: 20px;
   max-width: 500px;
   margin: 20px auto;
   text-align: center;
+  margin-top: 20px; /* Additional spacing between sections */
 }
 
 /* Page Heading */
 footer {
   margin-bottom: 20px;
   font-size: 14px;
-  color: #777;
+  color: #bbb;
 }
 
 h2 {
-  color: #333;
+  color: black; /* Ensure headers contrast against the background */
   margin-bottom: 15px;
 }
 
@@ -78,7 +92,7 @@ form {
 
 label {
   font-weight: bold;
-  color: #555;
+  color: black; /* Lighter color for better readability */
 }
 
 input[type="text"], input[type="password"], input[type="number"] {
@@ -110,14 +124,14 @@ button:hover {
 /* Balance Display */
 .account-info, #balance-display, #updated-balance-display {
   font-size: 18px;
-  color: #333;
+  color: black; /* Better readability over a darkened background */
   margin: 20px 0;
   font-weight: bold;
 }
 
 /* Transaction, Transfer, and Deposit Sections */
 #transactions, #transfer, #deposit {
-  background-color: #f9f9f9;
+  background-color: rgba(255, 255, 255, 0.9); /* Transparent background for legibility */
   padding: 15px;
   border-radius: 5px;
   margin-top: 20px;
@@ -150,6 +164,7 @@ button:hover {
   #dashboard-container, #balance-container, #transfer-container, #deposit-container {
     width: 90%;
     padding: 15px;
+    margin-top: 80px; /* Ensure content is spaced correctly on smaller screens */
   }
 
   h2 {
