@@ -6,19 +6,22 @@
   <title>Transfer and Deposit Funds</title>
   <link rel="stylesheet" href="./css/style.css">
 </head>
-<body>
-  <!-- Navbar -->
+<body id="transfer-deposit-page">
+  <!-- Navbar with Bank name -->
   <nav>
+    <div class="logo"><h3>Dylan & Edgar Federal Credit Union</h3></div> <!-- Added bank name as the logo -->
     <ul>
       <li><a href="dashboard.html">Dashboard</a></li>
       <li><a href="check_balance.html">Check Balance</a></li>
       <li><a href="transfer_funds.html">Transfer/Deposit Funds</a></li>
+      <li><a href="transaction_history.html">Transaction History</a></li>
       <li><a href="customer_support.html">Customer Support</a></li>
+      <li><a href="login.html" onclick="logout()">Logout</a></li>
     </ul>
   </nav>
 
   <!-- Transfer Funds Section -->
-  <div id="transfer-container">
+  <div class="container">
     <h2>Transfer Funds</h2>
     <form id="transfer-form">
       <label for="transfer-amount">Amount to Transfer:</label>
@@ -29,7 +32,7 @@
   </div>
 
   <!-- Deposit Funds Section -->
-  <div id="deposit-container">
+  <div class="container">
     <h2>Deposit Funds</h2>
     <form id="deposit-form">
       <label for="deposit-amount">Amount to Deposit:</label>

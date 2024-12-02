@@ -17,6 +17,19 @@ function updateBalanceDisplay() {
 // Initial display update on page load
 updateBalanceDisplay();
 
+// Function to save a transaction to localStorage
+function saveTransaction(type, amount) {
+    const transactions = JSON.parse(localStorage.getItem("transactions")) || [];
+    const newTransaction = {
+        type: type, // "Transfer" or "Deposit"
+        amount: parseFloat(amount),
+        date: new Date().toLocaleString(), // Timestamp
+    };
+    transactions.push(newTransaction); // Add the new transaction to the list
+    localStorage.setItem("transactions", JSON.stringify(transactions)); // Save the updated list
+    console.log("Transaction saved:", newTransaction); // Debugging transaction saving
+}
+
 // Function for transferring funds
 function transferFunds() {
     console.log("Transfer function called"); // Debugging function call
@@ -31,6 +44,7 @@ function transferFunds() {
         balance -= amount;
         localStorage.setItem("balance", balance.toString()); // Update balance in localStorage
         updateBalanceDisplay(); // Update displayed balance
+        saveTransaction("Transfer", amount); // Save the transaction
         alert("Transfer successful!");
         console.log("Balance after transfer:", balance); // Debugging updated balance
     }
@@ -48,6 +62,7 @@ function depositFunds() {
         balance += depositAmount;
         localStorage.setItem("balance", balance.toString()); // Update balance in localStorage
         updateBalanceDisplay(); // Update displayed balance
+        saveTransaction("Deposit", depositAmount); // Save the transaction
         alert("Deposit successful!");
         console.log("Balance after deposit:", balance); // Debugging updated balance
     }

@@ -6,19 +6,22 @@
   <title>Customer Support</title>
   <link rel="stylesheet" href="./css/style.css">
 </head>
-<body>
-  <!-- Navbar -->
+<body id="customer-support-page">
+  <!-- Navbar with Bank name -->
   <nav>
+    <div class="logo"><h3>Dylan & Edgar Federal Credit Union</h3></div> <!-- Added bank name as the logo -->
     <ul>
       <li><a href="dashboard.html">Dashboard</a></li>
       <li><a href="check_balance.html">Check Balance</a></li>
       <li><a href="transfer_funds.html">Transfer/Deposit Funds</a></li>
+      <li><a href="transaction_history.html">Transaction History</a></li>
       <li><a href="customer_support.html">Customer Support</a></li>
+      <li><a href="login.html" onclick="logout()">Logout</a></li>
     </ul>
   </nav>
 
   <!-- Customer Support Container -->
-  <div id="customer-support-container">
+  <div class="container">
     <h2>Contact Customer Support</h2>
     <p>If you have any questions or issues, please fill out the form below, and our support team will get back to you as soon as possible.</p>
     <form id="support-form">

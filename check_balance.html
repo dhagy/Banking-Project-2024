@@ -6,21 +6,26 @@
   <title>Check Balance</title>
   <link rel="stylesheet" href="./css/style.css">
 </head>
-<body>
-  <!-- Navbar -->
+<body id="check-balance-page">
+  <!-- Navbar with Bank name -->
   <nav>
+    <div class="logo"><h3>Dylan & Edgar Federal Credit Union</h3></div> <!-- Added bank name as the logo -->
     <ul>
+      <!-- Navigation Links -->
       <li><a href="dashboard.html">Dashboard</a></li>
       <li><a href="check_balance.html">Check Balance</a></li>
       <li><a href="transfer_funds.html">Transfer/Deposit Funds</a></li>
+      <li><a href="transaction_history.html">Transaction History</a></li>
       <li><a href="customer_support.html">Customer Support</a></li>
+      <li><a href="login.html" onclick="logout()">Logout</a></li>
     </ul>
   </nav>
 
   <!-- Balance Content -->
-  <div id="balance-container">
+  <div class="container">
     <h2>Your Account Balance</h2>
-    <p>Balance: <span id="balance">$10,000</span></p>
+    <p>Your current balance is:</p> 
+    <p><span id="balance">$10,000</span></p><!-- Dynamic balance display -->
   </div>
 
   <script src="./js/check_balance.js"></script>

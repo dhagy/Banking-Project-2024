@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transaction History</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body id="transaction-history-page">
+    <!-- Navbar with Bank Name -->
+    <nav>
+        <div class="logo"><h3>Dylan & Edgar Federal Credit Union</h3></div> <!-- Added bank name as the logo -->
+        <ul>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="check_balance.html">Check Balance</a></li>
+            <li><a href="transfer_funds.html">Transfer/Deposit Funds</a></li>
+            <li><a href="transaction_history.html">Transaction History</a></li>
+            <li><a href="customer_support.html">Customer Support</a></li>
+            <li><a href="login.html" onclick="logout()">Logout</a></li>
+          </ul>
+    </nav>
+    <div class="container">
+        <h2>Transaction History</h2>
+        <p>Below is a list of your recent transactions:</p>
+        <ul id="transaction-list">
+            <li>No transactions available.</li>
+        </ul>
+    </div>
+    <script src="./js/transaction_history.js"></script>
+</body>
+</html>
