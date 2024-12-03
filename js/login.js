@@ -27,7 +27,7 @@ function login() {
     var token = credential.accessToken;
     // The signed-in user info.
     var user = result.user;
-    window.location.href = "../dashboard.html";
+    window.location.href = "./dashboard.html";
     console.log(user);
     // IdP data available in result.additionalUserInfo.profile.
       // ...
@@ -42,6 +42,7 @@ function login() {
     console.log(errorMessage);
     // ...
   });
+}
 
   
   /*console.log("Login function called");
