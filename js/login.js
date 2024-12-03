@@ -15,6 +15,7 @@ const firebaseConfig = {
   var provider = new firebase.auth.GoogleAuthProvider();
 
 
+document.getElementById("login").addEventListener("click", login);
 
 function login() {
   auth
@@ -27,7 +28,7 @@ function login() {
     var token = credential.accessToken;
     // The signed-in user info.
     var user = result.user;
-    window.location.href = "./dashboard.html";
+    window.location.href = "dashboard.html";
     console.log(user);
     // IdP data available in result.additionalUserInfo.profile.
       // ...
@@ -55,4 +56,3 @@ function login() {
   } else {
     alert("Incorrect username or password.");
   }*/
-}
