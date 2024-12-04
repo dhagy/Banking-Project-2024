@@ -1,4 +1,4 @@
-const firebaseConfig = {
+/*const firebaseConfig = {
     apiKey: "AIzaSyBMDTAYpyTVpXuJ7WZYe4k4ST1nOz214sw",
     authDomain: "database225-beea1.firebaseapp.com",
     projectId: "database225-beea1",
@@ -12,7 +12,7 @@ const firebaseConfig = {
     const firebaseApp = firebase.initializeApp(firebaseConfig);
     const db = firebase.firestore();
     const auth = firebaseApp.auth();
-    var provider = new firebase.auth.GoogleAuthProvider();
+    var provider = new firebase.auth.GoogleAuthProvider();*/
 
 function logout() {
     //localStorage.removeItem("isLoggedIn"); // Remove login flag from localStorage
