@@ -15,7 +15,7 @@ const firebaseConfig = {
   var provider = new firebase.auth.GoogleAuthProvider();
 
 
-document.getElementById("login").addEventListener("click", login);
+document.getElementById("google").addEventListener("click", login);
 
 function login() {
   auth

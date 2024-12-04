@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Load transactions from localStorage
     const transactionList = document.getElementById("transaction-list");
     const transactions = JSON.parse(localStorage.getItem("transactions")) || [];
+    console.log(localStorage);
 
     // Display transactions
     if (transactions.length === 0) {
