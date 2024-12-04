@@ -22,30 +22,33 @@ const firebaseConfig = {
 
 
 
-function showTransactions() {
-    document.getElementById("transactions").style.display = "block";
-    document.getElementById("transfer").style.display = "none";
-  }
-  
-  function showTransfer() {
-    document.getElementById("transactions").style.display = "none";
-    document.getElementById("transfer").style.display = "block";
-  }
-  
-  function transferFunds() {
-    const amount = parseFloat(document.getElementById("amount").value);
-    const balanceElement = document.getElementById("balance");
-    let balance = parseFloat(balanceElement.textContent.replace("$", ""));
-    
-    if (amount > 0 && amount <= balance) {
-      balance -= amount;
-      balanceElement.textContent = `$${balance.toFixed(2)}`;
-      alert("Transfer successful!");
-    } else {
-      alert("Insufficient funds or invalid amount.");
-    }
-  }
+// Initialize balance in localStorage if not set
+if (localStorage.getItem("balance") === null) {
+  localStorage.setItem("balance", "10000"); // Default balance: $10,000
+}
 
+// Retrieve balance from localStorage
+let balance = parseFloat(localStorage.getItem("balance")) || 0;
+
+// Debugging: Log balance to ensure it's retrieved correctly
+console.log("Current Balance:", balance);
+
+// Function to display the balance on the Dashboard
+function displayBalance() {
+  const balanceElement = document.getElementById("balance");
+
+  if (balanceElement) {
+      balanceElement.textContent = `$${balance.toFixed(2)}`;
+      console.log("Balance displayed:", balance);
+  } else {
+      console.error("Balance element not found on the page.");
+  }
+}
+
+// Call the display function on page load
+displayBalance();
+
+/*
   // Logout function to end session
   function logout() {
     //localStorage.removeItem("isLoggedIn"); // Remove login flag from localStorage
@@ -60,6 +63,7 @@ function showTransactions() {
 
     window.location.href = "./login.html"; // Redirect to login page
   }
+  */
 
  /*
     // Event listener to run after the DOM is fully loaded
